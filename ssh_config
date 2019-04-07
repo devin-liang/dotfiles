@@ -1,0 +1,7 @@
+### CAEN
+Host caen login.engin.umich.edu
+	User devliang 
+	ControlMaster auto
+	ControlPath ~/.ssh/_%r@%h:%p
+	ControlPersist 43200
+# GitHub
