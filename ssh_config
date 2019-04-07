@@ -5,3 +5,7 @@ Host caen login.engin.umich.edu
 	ControlPath ~/.ssh/_%r@%h:%p
 	ControlPersist 43200
 # GitHub
+Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/devliang-github.pub
