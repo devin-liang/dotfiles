@@ -122,14 +122,14 @@ cd /mnt/c/Users/Devin/Desktop
 alias home='cd /mnt/c/Users/Devin/Desktop'
 alias root='cd /; cd /home/devliang'
 alias caen='ssh devliang@login.engin.umich.edu'
-
+#AUTO LAUNCH SSH AGENT
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
 
 agent_start () {
       (umask 077; ssh-agent >| "$env")
-          . "$env" >| /dev/null ; }
+      . "$env" >| /dev/null ; }
 
 agent_load_env
 
@@ -144,3 +144,10 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
 fi
           
 unset env 
+# END AUTO LAUNCH SSH AGENT
+export PATH=$PATH:"/c/Program Files/Java/jdk-12.0.1/"
+#ADD SSH KEYS
+
+alias 281='cd /mnt/c/Users/Devin/Desktop/eecs281'
+alias a=asciiquarium
+
