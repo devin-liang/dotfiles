@@ -116,12 +116,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Extras
+# Custom Options
+#
+# Change ls colors
 LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
+
+# Start terminal in desktop
 cd /mnt/c/Users/Devin/Desktop
+
+# Alias definitions
 alias home='cd /mnt/c/Users/Devin/Desktop'
 alias root='cd /; cd /home/devliang'
 alias caen='ssh devliang@login.engin.umich.edu'
+alias a='asciiquarium'
+
 #AUTO LAUNCH SSH AGENT
 env=~/.ssh/agent.env
 
@@ -145,9 +153,12 @@ fi
           
 unset env 
 # END AUTO LAUNCH SSH AGENT
+
+# ADD SSH KEYS
+ssh-add ~/.ssh/devliang_github 2>/dev/null
+ssh-add ~/.ssh/devliang_gitlab 2>/dev/null
 export PATH=$PATH:"/c/Program Files/Java/jdk-12.0.1/"
-#ADD SSH KEYS
 
-alias 281='cd /mnt/c/Users/Devin/Desktop/eecs281'
-alias a=asciiquarium
-
+# Make default text editor vim
+export VISUAL=vim
+export EDITOR="$VISUAL"

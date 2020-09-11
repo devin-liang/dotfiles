@@ -106,7 +106,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
-autocmd vimenter * NERDTree
+" Toggle NERDTree with ctrl + c
 map <C-c> :NERDTreeToggle<CR>
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
