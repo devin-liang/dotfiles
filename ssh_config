@@ -4,5 +4,5 @@ Host caen
   User devliang
 	ControlMaster auto
 	ControlPath ~/.ssh/_%r@%h:%p
-	ControlPersist 43200
+	ControlPersist 143200
 

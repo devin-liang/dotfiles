@@ -1,7 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
+# for examp
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -34,7 +33,6 @@ shopt -s checkwinsize
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -104,7 +102,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -117,9 +114,6 @@ if ! shopt -oq posix; then
 fi
 
 # Custom Options
-#
-# Change ls colors
-LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 
 # Start terminal in desktop
 cd /mnt/c/Users/Devin/Desktop
@@ -129,6 +123,7 @@ alias home='cd /mnt/c/Users/Devin/Desktop'
 alias root='cd /; cd /home/devliang'
 alias caen='ssh devliang@login.engin.umich.edu'
 alias a='asciiquarium'
+alias 482='root; cd eecs482'
 
 #AUTO LAUNCH SSH AGENT
 env=~/.ssh/agent.env
@@ -157,8 +152,12 @@ unset env
 # ADD SSH KEYS
 ssh-add ~/.ssh/devliang_github 2>/dev/null
 ssh-add ~/.ssh/devliang_gitlab 2>/dev/null
+ssh-add ~/.ssh/devliang_gitlab_eecs 2>/dev/null
+ssh-add ~/.ssh/devliang_github_2 2>/dev/null
 export PATH=$PATH:"/c/Program Files/Java/jdk-12.0.1/"
 
 # Make default text editor vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export DISPLAY=:0
+DOCKER_HOST=tcp://localhost:2375
